@@ -16,14 +16,14 @@ public class MergeOverlappingIntervals {
 
         int n = intervals.size();
         for (int i = 0; i < n; i++) {
-            int startIndex = intervals.get(i).start;
-            int endIndex = intervals.get(i).end;
+            int startValue = intervals.get(i).start;
+            int endValue = intervals.get(i).end;
 
-            while (i + 1 < n && intervals.get(i).end >= intervals.get(i + 1).start) {
-                endIndex = intervals.get(i + 1).end;
+            while (i + 1 < n && endValue >= intervals.get(i + 1).start) {
+                endValue = Math.max(endValue, intervals.get(i + 1).end);
                 i++;
             }
-            output.add(new Interval(startIndex, endIndex));
+            output.add(new Interval(startValue, endValue));
         }
         System.out.println("After merge overlapping intervals ::" + output);
         return output;

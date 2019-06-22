@@ -23,4 +23,26 @@ public class MaxSumContiguosSubArrayTest {
         int output = maxSumContiguosSubArray.maxSubArray(input);
         assertEquals(6, output);
     }
+
+    @Test
+    public void test2() {
+        ArrayList<Integer> input = new ArrayList<>(Arrays.asList(1, -1, 1, 1, 1, 1, -1));
+        int output = maxSumContiguosSubArray.maxSubArray(input);
+        assertEquals(4, output);
+    }
+
+    @Test
+    public void test3() {
+        ArrayList<Integer> input = new ArrayList<>(Arrays.asList(1, -1, 1, 1, 1, 1, -1));
+        int output = maxSumContiguosSubArray.maxSubArray1(input);
+        assertEquals(4, output);
+    }
+
+
+    @Test
+    public void test4() {
+        ArrayList<Integer> input = new ArrayList<>(Arrays.asList(-2, 1, -3, 4, -1, 2, 1, -5, 4));
+        int output = maxSumContiguosSubArray.maxSubArray1(input);
+        assertEquals(6, output);
+    }
 }
