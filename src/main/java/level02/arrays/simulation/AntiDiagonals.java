@@ -4,7 +4,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class AntiDiagonals {
-
+    /**
+     * Please refer to this vdo link to get more understanding of how to solve this problems
+     * https://www.youtube.com/watch?v=T8ErAYobcbc
+     *
+     * @param a
+     * @return
+     */
     public ArrayList<ArrayList<Integer>> diagonal(ArrayList<ArrayList<Integer>> a) {
         ArrayList<ArrayList<Integer>> answer = new ArrayList<>();
         if (a == null || a.size() == 0) {
